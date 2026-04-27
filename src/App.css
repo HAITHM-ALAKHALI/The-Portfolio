@@ -4,6 +4,7 @@
   box-sizing: border-box;
   border: none;
   outline: none;
+  cursor: default;
 }
 
 :root {
@@ -13,6 +14,7 @@
   --Special-Color: rgb(79, 194, 180);
   --Card-Hover-BG: rgba(30, 41, 59, 0.5);
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -176,10 +178,9 @@ main {
   z-index: 1;
 }
 
-/* .My-Main,.My-Certificates{
-    width: 100%;
-    min-height: 100vh;
-} */
+main p {
+  color: var(--Inactive-Color);
+}
 
 section {
   margin-bottom: 120px;
@@ -328,113 +329,6 @@ main h4 {
 }
 
 
-/* ===== FIX FOR MAIN LAYOUT (remove flex conflict) ===== */
-
-
-/* ===== CERTIFICATES PAGE STYLES ===== */
-.certificates-page {
-  width: 100%;
-  animation: fadeIn 0.2s ease;
-}
-
-.page-header {
-  margin-bottom: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 20px;
-}
-
-.page-header h1 {
-  font-size: 2rem;
-  margin: 15px 0 8px;
-  color: var(--Primary-Text-Color);
-}
-
-.back-home {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--Special-Color);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: 0.2s;
-}
-
-.back-home:hover {
-  transform: translateX(-5px);
-}
-
-.certificates-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.cert-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 25px;
-  background: transparent;
-  border-radius: 12px;
-  border: 1px solid transparent;
-  transition: all 0.2s;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.cert-card:hover {
-  background-color: var(--Card-Hover-BG);
-  border-color: rgba(255, 255, 255, 0.05);
-  transform: translateX(5px);
-}
-
-.cert-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 6px;
-  color: var(--Primary-Text-Color);
-}
-
-.cert-card .org {
-  color: var(--Special-Color);
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.cert-card .platform {
-  color: var(--Inactive-Color);
-  font-size: 0.85rem;
-}
-
-.verify-btn {
-  color: var(--Inactive-Color);
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 500;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: 0.2s;
-}
-
-.verify-btn:hover {
-  color: var(--Special-Color);
-}
-
-.verify-btn:hover .arrow {
-  transform: translate(4px, -2px);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* Responsive: when screen is smaller than 900px */
 @media (max-width: 900px) {

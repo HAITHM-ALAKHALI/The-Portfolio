@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 function AllCertifications() {
   const allCerts = [
     {
@@ -7,42 +6,42 @@ function AllCertifications() {
       title: "Business Email",
       org: "HP LIFE (HP Foundation)",
       platform: "",
-      link: "../../public/docs/Certificates/Business Email - HPL-EN11.pdf",
+      link: "https://www.life-global.org/certificate/97c2f617-0bfa-4b69-9204-29f074ca3ed9",
     },
     {
       id: 2,
       title: "Introduction to Digital Business Skills",
       org: "HP LIFE (HP Foundation)",
       platform: "",
-      link: "../../public/docs/Certificates/Introduction to Digital Business Skills.pdf",
+      link: "https://www.life-global.org/certificate/9faf77bb-0795-4b5e-9fe1-68d30ccc2c5a",
     },
     {
       id: 3,
       title: "Business Communications",
       org: "HP LIFE (HP Foundation)",
       platform: "",
-      link: "../../public/docs/Certificates/Business Communications.pdf",
+      link: "https://www.life-global.org/certificate/e2b4fa23-f3e4-4bd6-b5d9-5bc5ad316c76",
     },
     {
       id: 4,
       title: "Selling Online",
       org: "HP LIFE (HP Foundation)",
       platform: "",
-      link: "../../public/docs/Certificates/Selling Online.pdf",
+      link: "https://www.life-global.org/certificate/1e6586ce-04bf-4b10-a5e6-cdbbbadc6e3b",
     },
     {
       id: 5,
       title: "CCNA Routing and Wireless Essentials",
       org: "General Telecommunication Institute",
       platform: "",
-      link: "../../public/docs/Certificates/CCNA-_Switching-_Routing-_and_Wireless_Essentials.pdf",
+      link: "https://drive.google.com/file/d/19WrAXnbrgd0bA1zFlgyy5k8RghqhRvN2/view?usp=sharing",
     },
     {
       id: 6,
       title: "CCNA Introduction to Networks and Switching",
       org: "General Telecommunication Institute",
       platform: "",
-      link: "../../public/docs/Certificates/CCNA-_Introduction_to_Networks.pdf",
+      link: "https://drive.google.com/file/d/1vEd75fiDAOCr5Bbmaw-GE38kKSRX6mp3/view?usp=sharing",
     },
     {
       id: 7,
@@ -75,7 +74,7 @@ function AllCertifications() {
   ];
 
   return (
-    <div className="certificates-page">
+    <div className="all-page">
       <div className="page-header">
         <Link to="/" className="back-home">
           ← Back to Home
@@ -84,9 +83,9 @@ function AllCertifications() {
         <p>All my verified certifications from various platforms</p>
       </div>
 
-      <div className="certificates-list">
+      <div className="all-list">
         {allCerts.reverse().map((cert) => (
-          <div key={cert.id} className="cert-card">
+          <div key={cert.id} className="all-card">
             <div>
               <h3>{cert.title}</h3>
               <p className="org">{cert.org}</p>

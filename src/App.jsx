@@ -1,12 +1,16 @@
 import "./App.css";
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp, FaLink } from "react-icons/fa";
 import MyMain from "./pages/MyMain";
 import { useState, useEffect } from "react";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, useLocation } from "react-router-dom";
 import AllCertifications from "./pages/AllCertifications.jsx";
+import AllProjects from "./pages/AllProjects.jsx";
+import "./pages/AllPagesStyle.css";
+
 function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
+  const location = useLocation();
+  const isMainPage = location.pathname === "/";
   useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePos({
@@ -37,23 +41,25 @@ function App() {
           <h4>Full Stack Engineer</h4>
           <p>I build robust, scalable, and end-to-end solutions for the web.</p>
           <div className="Table-Content">
-            <ul>
-              <li>
-                <a href="/#About">
-                  <div className="Long-Dash"></div>About Me
-                </a>
-              </li>
-              <li>
-                <a href="/#Experience">
-                  <div className="Long-Dash"></div>Experience and Achievements
-                </a>
-              </li>
-              <li>
-                <a href="/#Projects">
-                  <div className="Long-Dash"></div>Projects
-                </a>
-              </li>
-            </ul>
+            {isMainPage && (
+              <ul>
+                <li>
+                  <a href="#About">
+                    <div className="Long-Dash"></div>About Me
+                  </a>
+                </li>
+                <li>
+                  <a href="#Experience">
+                    <div className="Long-Dash"></div>Experience and Achievements
+                  </a>
+                </li>
+                <li>
+                  <a href="#Projects">
+                    <div className="Long-Dash"></div>Projects
+                  </a>
+                </li>
+              </ul>
+            )}
           </div>
           <ul className="social-links">
             <li>
@@ -90,7 +96,7 @@ function App() {
             </li>
           </ul>
           <a
-            href="/public/docs/My CV.pdf"
+            href="https://drive.google.com/file/d/1iGdFOl6nmZZgP83OPPI44H36W_Y9SDqE/view?usp=sharing"
             className="download-cv"
             target="_blank"
           >
@@ -101,6 +107,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MyMain />} />
             <Route path="/Certificates" element={<AllCertifications />} />
+            <Route path="/Projects" element={<AllProjects />} />
           </Routes>
         </main>
       </div>

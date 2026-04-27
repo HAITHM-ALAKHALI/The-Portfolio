@@ -1,0 +1,16 @@
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.Link-Logo {
+  font-size: 0.9rem;
+}
+
+.all-card {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  /* existing styles remain */
+}

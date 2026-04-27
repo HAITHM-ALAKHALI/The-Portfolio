@@ -1,0 +1,257 @@
+/* ===== CERTIFICATES PAGE STYLES ===== */
+.all-page {
+  width: 100%;
+  animation: fadeIn 0.2s ease;
+}
+
+.page-header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  margin: 15px 0 8px;
+  color: var(--Primary-Text-Color);
+}
+
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--Special-Color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.back-home:hover {
+  transform: translateX(-5px);
+}
+
+.all-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.all-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background: transparent;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.all-card:hover {
+  background-color: var(--Card-Hover-BG);
+  border-color: rgba(255, 255, 255, 0.05);
+  transform: translateX(5px);
+}
+
+.all-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: var(--Primary-Text-Color);
+}
+
+.all-card .org {
+  color: var(--Special-Color);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.all-card .platform {
+  color: var(--Inactive-Color);
+  font-size: 0.85rem;
+}
+
+.verify-btn {
+  color: var(--Inactive-Color);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s;
+}
+
+.verify-btn:hover {
+  color: var(--Special-Color);
+}
+
+.verify-btn:hover .arrow {
+  transform: translate(4px, -2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Project-specific improvements */
+.project-description {
+  color: var(--Inactive-Color);
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 8px 0;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--Primary-Text-Color);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.project-links a:hover {
+  color: var(--Special-Color);
+}
+
+.link-icon {
+  font-size: 0.9rem;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 280px; /* limits the width – adjust as needed */
+  margin: 0 0 12px 0; /* space below image only */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9; /* keeps consistent shape */
+  transition: transform 0.2s ease;
+}
+
+.all-card:hover .project-image img {
+  transform: scale(1.02);
+}
+
+
+.project-card-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;      /* ← changed from flex-start */
+  margin-bottom: 30px;
+}
+
+.project-image-left {
+  flex-shrink: 0;
+  width: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.project-image-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+/* On mobile, stack vertically and align properly */
+@media (max-width: 700px) {
+  .project-card-wrapper {
+    flex-direction: column;
+    align-items: flex-start; /* on mobile, image stays above text, left aligned */
+  }
+  .project-image-left {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+.all-card:hover + .project-image-left img,
+.project-card-wrapper:hover .project-image-left img {
+  transform: scale(1.02);
+}
+
+/* On mobile, stack vertically */
+@media (max-width: 700px) {
+  .project-card-wrapper {
+    flex-direction: column;
+  }
+  .project-image-left {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Modal (lightbox) styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  cursor: default;
+}
+
+.modal-content img {
+  width: auto;
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.modal-close:hover {
+  color: var(--Special-Color);
+}
