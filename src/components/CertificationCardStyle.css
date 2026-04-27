@@ -1,0 +1,56 @@
+.cert-card-container {
+  margin-bottom: 24px;
+}
+
+.cert-main-link {
+  text-decoration: none;
+  /* منع ظهور مؤشر الكتابة وتفعيل مؤشر اليد */
+  cursor: pointer;
+  user-select: none;
+}
+
+.cert-title {
+  color: var(--Primary-Text-Color); /* لون النص الأبيض الأساسي */
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+/* التأثير عند مرور الماوس على الرابط */
+.cert-main-link:hover .cert-title {
+  color: var(--Special-Color); /* اللون rgb(79, 194, 180) */
+}
+
+.arrow-icon {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.cert-main-link:hover .arrow-icon {
+  transform: translate(3px, -3px); /* حركة السهم للأعلى واليمين */
+}
+
+.cert-meta {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--Inactive-Color); /* لون رمادي خفيف */
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.platform-name {
+  font-weight: 500;
+  /* اختياري: يمكنك جعل كلمة Coursera بلونها الأصلي خفيفاً */
+  opacity: 0.8;
+}
+
+.separator {
+  opacity: 0.5;
+}
