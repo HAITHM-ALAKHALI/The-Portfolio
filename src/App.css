@@ -314,7 +314,7 @@ main h4 {
 }
 
 .Topic_se {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .view-more-link {
@@ -491,5 +491,8 @@ main h4 {
   .tags span {
     font-size: 0.7rem;
     padding: 4px 10px;
+  }
+  .Topic_se{
+    padding-bottom: 60px;
   }
 }
