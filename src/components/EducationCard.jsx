@@ -1,9 +1,9 @@
 function EducationCard({ date, title, place, desc }) {
   return (
     <>
-      <div class="card">
-        <span class="card-date">{date}</span>
-        <div class="card-info">
+      <div className="card">
+        <span className="card-date">{date}</span>
+        <div className="card-info">
           <h5>
             {title} · {place}
           </h5>
