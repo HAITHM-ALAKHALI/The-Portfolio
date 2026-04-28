@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://haithm-al-akhali.vercel.app/sitemap.xml
