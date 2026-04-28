@@ -4,6 +4,7 @@ import CertificationCard from "../components/CertificationCard.jsx";
 import AchievementCard from "../components/AchievementCard.jsx";
 import ProjectCard from "../components/ProjectCard.jsx";
 import { Route, Routes, Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function MyMain() {
   const Educations = [
@@ -147,6 +148,40 @@ function MyMain() {
 
   return (
     <>
+      <Helmet>
+        {/* Default meta tags for the whole site */}
+        <title>Haithm Al‑Akhali – Full‑Stack Developer</title>
+        <meta
+          name="description"
+          content="Computer Science student and Full-Stack Developer. Explore projects, certifications, and achievements."
+        />
+
+        {/* Open Graph / Social Sharing */}
+        <meta
+          property="og:title"
+          content="Haithm Al‑Akhali – Full‑Stack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Modern portfolio with React, PHP, CCNA, and interactive projects."
+        />
+        <meta
+          property="og:image"
+          content="https://haithm-al-akhali.vercel.app/og-image.webp"
+        />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+        <meta
+          property="og:url"
+          content="https://haithm-al-akhali.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://haithm-al-akhali.vercel.app/og-image.webp"
+        />
+      </Helmet>
       <div className="My-Main">
         <section id="About">
           <p className="summary">
@@ -164,7 +199,7 @@ function MyMain() {
           <div className="education-section">
             <h4>Education</h4>
 
-            {Educations.reverse().map((Education) => (
+            {[...Educations].reverse().map((Education) => (
               <EducationCard
                 key={Education.id}
                 date={Education.date}
@@ -180,7 +215,7 @@ function MyMain() {
           <div className="Topic_se">
             <h4>Work Experience</h4>
 
-            {Experiences.reverse().map((Experience) => (
+            {[...Experiences].reverse().map((Experience) => (
               <WorkExperienceCard
                 key={Experience.id}
                 date={Experience.date}
@@ -196,7 +231,7 @@ function MyMain() {
             <h4>Professional Certifications</h4>
 
             <ul className="cert-links">
-              {Certifications.reverse().map((Certificate) => (
+              {[...Certifications].reverse().map((Certificate) => (
                 <li key={Certificate.id}>
                   <CertificationCard
                     title={Certificate.title}
@@ -217,7 +252,7 @@ function MyMain() {
 
           <div className="Topic_se">
             <h4>Achievements</h4>
-            {Achievements.reverse().map((Achievement) => (
+            {[...Achievements].reverse().map((Achievement) => (
               <AchievementCard
                 key={Achievement.id}
                 title={Achievement.title}
@@ -233,7 +268,7 @@ function MyMain() {
         <section id="Projects">
           <div className="Topic_se">
             <h4>Projects</h4>
-            {Projects.reverse().map((Project) => (
+            {[...Projects].reverse().map((Project) => (
               <ProjectCard
                 key={Project.id}
                 title={Project.title}

@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   border: none;
   outline: none;
+  font-family: inherit;
   cursor: default;
 }
 
@@ -17,6 +20,13 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+a:focus-visible,
+button:focus-visible,
+.verify-btn:focus-visible {
+  outline: 2px solid var(--Special-Color);
+  outline-offset: 2px;
 }
 
 .main-layout {
@@ -44,7 +54,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   color: var(--Primary-Text-Color);
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
   cursor: default;
 }
 

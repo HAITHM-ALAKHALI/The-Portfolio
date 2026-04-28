@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 function AllCertifications() {
   const allCerts = [
     {
@@ -75,6 +76,40 @@ function AllCertifications() {
 
   return (
     <div className="all-page">
+      <Helmet>
+        {/* Default meta tags for the whole site */}
+        <title>Haithm Al‑Akhali – Full‑Stack Developer</title>
+        <meta
+          name="description"
+          content="Computer Science student and Full-Stack Developer. Explore projects, certifications, and achievements."
+        />
+
+        {/* Open Graph / Social Sharing */}
+        <meta
+          property="og:title"
+          content="Haithm Al‑Akhali – Full‑Stack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Modern portfolio with React, PHP, CCNA, and interactive projects."
+        />
+        <meta
+          property="og:image"
+          content="https://haithm-al-akhali.vercel.app/og-image.webp"
+        />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+        <meta
+          property="og:url"
+          content="https://haithm-al-akhali.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://haithm-al-akhali.vercel.app/og-image.webp"
+        />
+      </Helmet>
       <div className="page-header">
         <Link to="/" className="back-home">
           ← Back to Home
@@ -84,7 +119,7 @@ function AllCertifications() {
       </div>
 
       <div className="all-list">
-        {allCerts.reverse().map((cert) => (
+        {[...allCerts].reverse().map((cert) => (
           <div key={cert.id} className="all-card">
             <div>
               <h3>{cert.title}</h3>

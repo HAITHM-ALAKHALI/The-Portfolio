@@ -1,11 +1,17 @@
 import "./App.css";
-import { FaGithub, FaLinkedin, FaWhatsapp, FaLink } from "react-icons/fa";
-import MyMain from "./pages/MyMain";
-import { useState, useEffect } from "react";
-import { Route, Routes, Link, useLocation } from "react-router-dom";
-import AllCertifications from "./pages/AllCertifications.jsx";
-import AllProjects from "./pages/AllProjects.jsx";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { useState, useEffect, lazy, Suspense } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+// import MyMain from "./pages/MyMain";
+// import AllCertifications from "./pages/AllCertifications.jsx";
+// import AllProjects from "./pages/AllProjects.jsx";
 import "./pages/AllPagesStyle.css";
+import NotFound from "./pages/NotFound";
+import { Helmet } from "react-helmet";
+
+const MyMain = lazy(() => import("./pages/MyMain"));
+const AllCertifications = lazy(() => import("./pages/AllCertifications"));
+const AllProjects = lazy(() => import("./pages/AllProjects"));
 
 function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -34,6 +40,41 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        {/* Default meta tags for the whole site */}
+        <title>Haithm Al‑Akhali – Full‑Stack Developer</title>
+        <meta
+          name="description"
+          content="Computer Science student and Full-Stack Developer. Explore projects, certifications, and achievements."
+        />
+
+        {/* Open Graph / Social Sharing */}
+        <meta
+          property="og:title"
+          content="Haithm Al‑Akhali – Full‑Stack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Modern portfolio with React, PHP, CCNA, and interactive projects."
+        />
+        <meta
+          property="og:image"
+          content="https://haithm-al-akhali.vercel.app/og-image.webp"
+        />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+        <meta
+          property="og:url"
+          content="https://haithm-al-akhali.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://haithm-al-akhali.vercel.app/og-image.webp"
+        />
+      </Helmet>
+
       <div
         className="main-layout"
         style={{
@@ -100,7 +141,7 @@ function App() {
             </li>
           </ul>
           <a
-            href="https://drive.google.com/file/d/1iGdFOl6nmZZgP83OPPI44H36W_Y9SDqE/view?usp=sharing"
+            href="https://drive.google.com/file/d/19zrkKzu_ci3wCU50QZfzexQOfIhYF2gW/view?usp=sharing"
             className="download-cv"
             target="_blank"
           >
@@ -108,11 +149,14 @@ function App() {
           </a>
         </aside>
         <main>
-          <Routes>
-            <Route path="/" element={<MyMain />} />
-            <Route path="/Certificates" element={<AllCertifications />} />
-            <Route path="/Projects" element={<AllProjects />} />
-          </Routes>
+          <Suspense fallback={<div style={{ color: "white" }}>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<MyMain />} />
+              <Route path="/Certificates" element={<AllCertifications />} />
+              <Route path="/Projects" element={<AllProjects />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </main>
       </div>
     </>

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { HiLink } from "react-icons/hi";
 import { useState } from "react";
 import { createPortal } from "react-dom";
+import { Helmet } from "react-helmet";
 
 function AllProjects() {
   const [modalImage, setModalImage] = useState(null);
@@ -80,10 +81,42 @@ function AllProjects() {
     },
   ];
 
-  const sortedProjects = [...allPros].reverse();
-
   return (
     <div className="all-page">
+      <Helmet>
+        {/* Default meta tags for the whole site */}
+        <title>Haithm Al‑Akhali – Full‑Stack Developer</title>
+        <meta
+          name="description"
+          content="Computer Science student and Full-Stack Developer. Explore projects, certifications, and achievements."
+        />
+
+        {/* Open Graph / Social Sharing */}
+        <meta
+          property="og:title"
+          content="Haithm Al‑Akhali – Full‑Stack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Modern portfolio with React, PHP, CCNA, and interactive projects."
+        />
+        <meta
+          property="og:image"
+          content="https://haithm-al-akhali.vercel.app/og-image.webp"
+        />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+        <meta
+          property="og:url"
+          content="https://haithm-al-akhali.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:image"
+          content="https://haithm-al-akhali.vercel.app/og-image.webp"
+        />
+      </Helmet>
       <div className="page-header">
         <Link to="/" className="back-home">
           ← Back to Home
@@ -108,7 +141,7 @@ function AllProjects() {
             </div>,
             document.getElementById("modal-root"),
           )}
-        {sortedProjects.map((pro) => (
+        {[...allPros].reverse().map((pro) => (
           <div key={pro.id} className="project-card-wrapper">
             {/* Image on the left – only if exists */}
             {pro.image && (
