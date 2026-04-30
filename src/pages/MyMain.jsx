@@ -125,10 +125,15 @@ function MyMain() {
       id: 2,
       title: "Restaurant Website",
       job: "Full-Stack Developer",
-      description: `Responsive website with dynamic menu system. Built with PHP
-                  and MySQL for backend data management.`,
+      description: `Responsive restaurant website with dynamic menu system, online ordering (add‑to‑cart + checkout), user login/registration, and an admin dashboard to manage categories, menu items, and orders. Built with PHP (PDO) and MySQL.`,
       tags: ["PHP", "MySQL", "HTML5", "CSS3"],
-      links: [],
+      links: [
+        {
+          id: 1,
+          url: "https://novarestaurant.liveblog365.com/",
+          title: "Live Demo",
+        },
+      ],
     },
     {
       id: 3,
@@ -148,7 +153,6 @@ function MyMain() {
 
   return (
     <>
-
       <div className="My-Main">
         <section id="About">
           <p className="summary">
