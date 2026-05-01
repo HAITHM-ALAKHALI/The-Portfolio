@@ -8,6 +8,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "./pages/AllPagesStyle.css";
 import NotFound from "./pages/NotFound";
 import { Helmet } from "react-helmet";
+import { Analytics } from "@vercel/analytics/next"
 
 const MyMain = lazy(() => import("./pages/MyMain"));
 const AllCertifications = lazy(() => import("./pages/AllCertifications"));
@@ -124,6 +125,7 @@ function App() {
           </Suspense>
         </main>
       </div>
+      <Analytics></Analytics>
     </>
   );
 }
