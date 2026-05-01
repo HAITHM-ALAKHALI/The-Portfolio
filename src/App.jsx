@@ -9,10 +9,13 @@ import "./pages/AllPagesStyle.css";
 import NotFound from "./pages/NotFound";
 import { Helmet } from "react-helmet";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 
 const MyMain = lazy(() => import("./pages/MyMain"));
 const AllCertifications = lazy(() => import("./pages/AllCertifications"));
 const AllProjects = lazy(() => import("./pages/AllProjects"));
+
 
 function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -125,7 +128,8 @@ function App() {
           </Suspense>
         </main>
       </div>
-      <Analytics></Analytics>
+      <Analytics/>
+      <SpeedInsights />
     </>
   );
 }
