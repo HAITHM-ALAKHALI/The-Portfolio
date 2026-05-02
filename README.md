@@ -1,16 +1,34 @@
-# React + Vite
+# 🌐 My Professional Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code of my personal portfolio. This site showcases my journey as a **Full-Stack Developer**, my technical projects, and my expertise in modern web technologies.
 
-Currently, two official plugins are available:
+**Live Demo:** [haithm-al-akhali.vercel.app](https://haithm-al-akhali.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🛠️ Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 18** - UI Library
+- **Vite** - Lightning-fast build tool
+- **Tailwind CSS** - For styling and responsiveness
+- **Framer Motion** - For smooth animations
+- **Vercel** - Deployment and Hosting
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 📱 **Fully Responsive:** Optimized for mobile, tablet, and desktop.
+- 🎨 **Modern UI:** Clean, dark-themed aesthetic.
+- 📂 **Project Showcase:** Detailed cards for my top projects (NOVA, Magic Square, etc.).
+- 🚀 **Performance:** Near-perfect Lighthouse scores thanks to Vite's optimization.
+
+---
+
+## 🏗️ Getting Started
+
+To run this project locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone git@github.com:HAITHM-ALAKHALI/Portfolio.git
