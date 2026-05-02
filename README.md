@@ -10,9 +10,7 @@ Welcome to the source code of my personal portfolio. This site showcases my jour
 
 - **React 18** - UI Library
 - **Vite** - Lightning-fast build tool
-- **Tailwind CSS** - For styling and responsiveness
 - **Framer Motion** - For smooth animations
-- **Vercel** - Deployment and Hosting
 
 ---
 
