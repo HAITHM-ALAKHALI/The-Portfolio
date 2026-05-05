@@ -8,14 +8,12 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "./pages/AllPagesStyle.css";
 import NotFound from "./pages/NotFound";
 import { Helmet } from "react-helmet";
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/react"
-
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const MyMain = lazy(() => import("./pages/MyMain"));
 const AllCertifications = lazy(() => import("./pages/AllCertifications"));
 const AllProjects = lazy(() => import("./pages/AllProjects"));
-
 
 function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -110,7 +108,7 @@ function App() {
             </li>
           </ul>
           <a
-            href="https://drive.google.com/file/d/19zrkKzu_ci3wCU50QZfzexQOfIhYF2gW/view?usp=sharing"
+            href="https://drive.google.com/file/d/1vFr934yRAoKqLya4qJKh3tZsa9J6bgRg/view?usp=sharing"
             className="download-cv"
             target="_blank"
           >
@@ -128,7 +126,7 @@ function App() {
           </Suspense>
         </main>
       </div>
-      <Analytics/>
+      <Analytics />
       <SpeedInsights />
     </>
   );
