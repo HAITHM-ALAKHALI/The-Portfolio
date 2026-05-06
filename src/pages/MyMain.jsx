@@ -156,15 +156,14 @@ function MyMain() {
       <div className="My-Main">
         <section id="About">
           <p className="summary">
-            Computer Science student and Full-Stack Developer with a robust
-            foundation in software architecture and computer networks.
-            Proficient in building scalable web applications using React,
-            TypeScript, and PHP, complemented by a deep understanding of
-            low-level programming in C++. Certified in CCNA and Software
-            Engineering, bringing a unique perspective that combines modern
-            frontend excellence with rigorous backend and networking logic.
-            Proven track record in developing efficient systems through academic
-            and professional projects.
+            Full-Stack Developer and Computer Science student with proven
+            expertise in building scalable web applications using React,
+            TypeScript, JavaScript, PHP, and MySQL. Certified Cisco Certified
+            Network Associate (CCNA) with hands-on experience developing 5+
+            production-ready applications. Combines frontend development
+            excellence with backend architecture and networking knowledge.
+            Skilled in Object-Oriented Programming (OOP), responsive UI/UX
+            design, system optimization, and RESTful API development.
           </p>
 
           <div className="education-section">
