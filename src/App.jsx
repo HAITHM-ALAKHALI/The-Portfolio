@@ -108,7 +108,7 @@ function App() {
             </li>
           </ul>
           <a
-            href="https://drive.google.com/file/d/1ZD5zXfv0rSzC8j7S_8utcLmcpGsl0oRv/view?usp=sharing"
+            href="https://drive.google.com/file/d/1TdrA26DlyFvfRr--mN7xBh1yPJMc8Baz/view?usp=sharing"
             className="download-cv"
             target="_blank"
           >
