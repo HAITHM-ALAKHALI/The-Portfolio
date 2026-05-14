@@ -72,6 +72,13 @@ function AllCertifications() {
       platform: "Coursera",
       link: "https://coursera.org/verify/2BR01KYON6FQ",
     },
+        {
+      id: 11,
+      title: "Start Writing Prompts like a Pro",
+      org: "Google",
+      platform: "Coursera",
+      link: "https://coursera.org/verify/MNE08Z0KVPNO",
+    },
   ];
 
   return (

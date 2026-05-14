@@ -52,31 +52,31 @@ function MyMain() {
   const Certifications = [
     {
       id: 1,
-      title: "Introduction to Computer Programming",
-      organization: "University of London",
-      platform: "Coursera",
-      link: "https://coursera.org/verify/EM8VF0SZF1NG",
-    },
-    {
-      id: 2,
       title: "Introduction to Artificial Intelligence (AI)",
       organization: "IBM",
       platform: "Coursera",
       link: "https://coursera.org/verify/UNR8NTNUO8FI",
     },
     {
-      id: 3,
+      id: 2,
       title: "Introduction to Software Engineering",
       organization: "IBM",
       platform: "Coursera",
       link: "https://coursera.org/verify/6R7B12UXS4BQ",
     },
     {
-      id: 4,
+      id: 3,
       title: "Building Web Applications in PHP",
       organization: "University of Michigan",
       platform: "Coursera",
       link: "https://coursera.org/verify/2BR01KYON6FQ",
+    },
+    {
+      id: 4,
+      title: "Start Writing Prompts like a Pro",
+      organization: "Google",
+      platform: "Coursera",
+      link: "https://coursera.org/verify/MNE08Z0KVPNO",
     },
   ];
 
